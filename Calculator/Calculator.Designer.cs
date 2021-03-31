@@ -32,7 +32,6 @@ namespace Calculator
         private void InitializeComponent()
         {
             this.Background = new System.Windows.Forms.PictureBox();
-            this.Display = new CalculatorLibrary.MyTextBox();
             this.Logo = new System.Windows.Forms.TextBox();
             this.ChargingCell_0 = new System.Windows.Forms.PictureBox();
             this.ChargingCell_1 = new System.Windows.Forms.PictureBox();
@@ -45,20 +44,22 @@ namespace Calculator
             this.Division = new System.Windows.Forms.Button();
             this.DecimalPoint = new System.Windows.Forms.Button();
             this.Solve = new System.Windows.Forms.Button();
-            this.Seven = new CalculatorLibrary.MyButton();
-            this.Eight = new CalculatorLibrary.MyButton();
-            this.Nine = new CalculatorLibrary.MyButton();
             this.Multiplication = new System.Windows.Forms.Button();
-            this.Four = new CalculatorLibrary.MyButton();
-            this.Five = new CalculatorLibrary.MyButton();
-            this.Six = new CalculatorLibrary.MyButton();
             this.Addition = new System.Windows.Forms.Button();
-            this.One = new CalculatorLibrary.MyButton();
-            this.Two = new CalculatorLibrary.MyButton();
-            this.Three = new CalculatorLibrary.MyButton();
             this.Subtraction = new System.Windows.Forms.Button();
             this.SignChange = new System.Windows.Forms.Button();
+            this.TmpDisplay = new CalculatorLibrary.MyTextBox();
+            this.Display = new CalculatorLibrary.MyTextBox();
             this.Zero = new CalculatorLibrary.MyButton();
+            this.Nine = new CalculatorLibrary.MyButton();
+            this.Eight = new CalculatorLibrary.MyButton();
+            this.Seven = new CalculatorLibrary.MyButton();
+            this.Six = new CalculatorLibrary.MyButton();
+            this.Five = new CalculatorLibrary.MyButton();
+            this.Four = new CalculatorLibrary.MyButton();
+            this.Three = new CalculatorLibrary.MyButton();
+            this.Two = new CalculatorLibrary.MyButton();
+            this.One = new CalculatorLibrary.MyButton();
             ((System.ComponentModel.ISupportInitialize)(this.Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChargingCell_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChargingCell_1)).BeginInit();
@@ -70,32 +71,18 @@ namespace Calculator
             // Background
             // 
             this.Background.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Background.Location = new System.Drawing.Point(4, 3);
+            this.Background.Location = new System.Drawing.Point(4, 4);
             this.Background.Name = "Background";
-            this.Background.Size = new System.Drawing.Size(300, 432);
+            this.Background.Size = new System.Drawing.Size(300, 455);
             this.Background.TabIndex = 1;
             this.Background.TabStop = false;
-            // 
-            // Display
-            // 
-            this.Display.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Display.Location = new System.Drawing.Point(13, 24);
-            this.Display.Name = "Display";
-            this.Display.ReadOnly = true;
-            this.Display.Size = new System.Drawing.Size(279, 38);
-            this.Display.TabIndex = 2;
-            this.Display.Text = "0 ";
-            this.Display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Display.Value_Result = this.Display.Value_Tmp;
-            this.Display.Value_Tmp = 0D;
             // 
             // Logo
             // 
             this.Logo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Logo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Logo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Logo.Location = new System.Drawing.Point(15, 68);
+            this.Logo.Location = new System.Drawing.Point(15, 92);
             this.Logo.Name = "Logo";
             this.Logo.ReadOnly = true;
             this.Logo.Size = new System.Drawing.Size(83, 23);
@@ -106,7 +93,7 @@ namespace Calculator
             // ChargingCell_0
             // 
             this.ChargingCell_0.BackColor = System.Drawing.Color.BurlyWood;
-            this.ChargingCell_0.Location = new System.Drawing.Point(168, 68);
+            this.ChargingCell_0.Location = new System.Drawing.Point(168, 92);
             this.ChargingCell_0.Margin = new System.Windows.Forms.Padding(1);
             this.ChargingCell_0.Name = "ChargingCell_0";
             this.ChargingCell_0.Size = new System.Drawing.Size(23, 23);
@@ -116,7 +103,7 @@ namespace Calculator
             // ChargingCell_1
             // 
             this.ChargingCell_1.BackColor = System.Drawing.Color.BurlyWood;
-            this.ChargingCell_1.Location = new System.Drawing.Point(193, 68);
+            this.ChargingCell_1.Location = new System.Drawing.Point(193, 92);
             this.ChargingCell_1.Margin = new System.Windows.Forms.Padding(1);
             this.ChargingCell_1.Name = "ChargingCell_1";
             this.ChargingCell_1.Size = new System.Drawing.Size(23, 23);
@@ -126,7 +113,7 @@ namespace Calculator
             // ChargingCell_2
             // 
             this.ChargingCell_2.BackColor = System.Drawing.Color.BurlyWood;
-            this.ChargingCell_2.Location = new System.Drawing.Point(218, 68);
+            this.ChargingCell_2.Location = new System.Drawing.Point(218, 92);
             this.ChargingCell_2.Margin = new System.Windows.Forms.Padding(1);
             this.ChargingCell_2.Name = "ChargingCell_2";
             this.ChargingCell_2.Size = new System.Drawing.Size(23, 23);
@@ -136,7 +123,7 @@ namespace Calculator
             // ChargingCell_3
             // 
             this.ChargingCell_3.BackColor = System.Drawing.Color.BurlyWood;
-            this.ChargingCell_3.Location = new System.Drawing.Point(243, 68);
+            this.ChargingCell_3.Location = new System.Drawing.Point(243, 92);
             this.ChargingCell_3.Margin = new System.Windows.Forms.Padding(1);
             this.ChargingCell_3.Name = "ChargingCell_3";
             this.ChargingCell_3.Size = new System.Drawing.Size(23, 23);
@@ -146,7 +133,7 @@ namespace Calculator
             // ChargingCell_4
             // 
             this.ChargingCell_4.BackColor = System.Drawing.Color.BurlyWood;
-            this.ChargingCell_4.Location = new System.Drawing.Point(268, 68);
+            this.ChargingCell_4.Location = new System.Drawing.Point(268, 92);
             this.ChargingCell_4.Margin = new System.Windows.Forms.Padding(1);
             this.ChargingCell_4.Name = "ChargingCell_4";
             this.ChargingCell_4.Size = new System.Drawing.Size(23, 23);
@@ -161,12 +148,13 @@ namespace Calculator
             this.ClearAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ClearAction.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClearAction.Location = new System.Drawing.Point(26, 100);
+            this.ClearAction.Location = new System.Drawing.Point(26, 124);
             this.ClearAction.Name = "ClearAction";
             this.ClearAction.Size = new System.Drawing.Size(60, 60);
             this.ClearAction.TabIndex = 9;
             this.ClearAction.Text = "CE";
             this.ClearAction.UseVisualStyleBackColor = false;
+            this.ClearAction.Click += new System.EventHandler(this.ClearAction_Click);
             // 
             // Clear
             // 
@@ -176,12 +164,13 @@ namespace Calculator
             this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Clear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Clear.Location = new System.Drawing.Point(92, 100);
+            this.Clear.Location = new System.Drawing.Point(92, 124);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(60, 60);
             this.Clear.TabIndex = 10;
             this.Clear.Text = "C";
             this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Backspace
             // 
@@ -191,12 +180,13 @@ namespace Calculator
             this.Backspace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Backspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Backspace.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Backspace.Location = new System.Drawing.Point(158, 100);
+            this.Backspace.Location = new System.Drawing.Point(158, 124);
             this.Backspace.Name = "Backspace";
             this.Backspace.Size = new System.Drawing.Size(60, 60);
             this.Backspace.TabIndex = 11;
             this.Backspace.Text = "⌫";
             this.Backspace.UseVisualStyleBackColor = false;
+            this.Backspace.Click += new System.EventHandler(this.Backspace_Click);
             // 
             // Division
             // 
@@ -206,13 +196,13 @@ namespace Calculator
             this.Division.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Division.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Division.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Division.Location = new System.Drawing.Point(224, 100);
+            this.Division.Location = new System.Drawing.Point(224, 124);
             this.Division.Name = "Division";
             this.Division.Size = new System.Drawing.Size(60, 60);
             this.Division.TabIndex = 12;
             this.Division.Text = "÷";
             this.Division.UseVisualStyleBackColor = false;
-            this.Division.Click += new System.EventHandler(this.Division_Click);
+            this.Division.Click += new System.EventHandler(this.Solve_Click);
             // 
             // DecimalPoint
             // 
@@ -222,7 +212,7 @@ namespace Calculator
             this.DecimalPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DecimalPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DecimalPoint.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DecimalPoint.Location = new System.Drawing.Point(158, 364);
+            this.DecimalPoint.Location = new System.Drawing.Point(158, 388);
             this.DecimalPoint.Name = "DecimalPoint";
             this.DecimalPoint.Size = new System.Drawing.Size(60, 60);
             this.DecimalPoint.TabIndex = 17;
@@ -238,64 +228,13 @@ namespace Calculator
             this.Solve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Solve.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Solve.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Solve.Location = new System.Drawing.Point(224, 364);
+            this.Solve.Location = new System.Drawing.Point(224, 388);
             this.Solve.Name = "Solve";
             this.Solve.Size = new System.Drawing.Size(60, 60);
             this.Solve.TabIndex = 18;
             this.Solve.Text = "=";
             this.Solve.UseVisualStyleBackColor = false;
             this.Solve.Click += new System.EventHandler(this.Solve_Click);
-            // 
-            // Seven
-            // 
-            this.Seven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Seven.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Seven.FlatAppearance.BorderSize = 3;
-            this.Seven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Seven.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Seven.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Seven.Location = new System.Drawing.Point(26, 166);
-            this.Seven.Name = "Seven";
-            this.Seven.Size = new System.Drawing.Size(60, 60);
-            this.Seven.TabIndex = 22;
-            this.Seven.Text = "7";
-            this.Seven.UseVisualStyleBackColor = false;
-            this.Seven.Value = 7D;
-            this.Seven.Click += new System.EventHandler(this.Number_button_Click);
-            // 
-            // Eight
-            // 
-            this.Eight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Eight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Eight.FlatAppearance.BorderSize = 3;
-            this.Eight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Eight.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Eight.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Eight.Location = new System.Drawing.Point(92, 166);
-            this.Eight.Name = "Eight";
-            this.Eight.Size = new System.Drawing.Size(60, 60);
-            this.Eight.TabIndex = 21;
-            this.Eight.Text = "8";
-            this.Eight.UseVisualStyleBackColor = false;
-            this.Eight.Value = 8D;
-            this.Eight.Click += new System.EventHandler(this.Number_button_Click);
-            // 
-            // Nine
-            // 
-            this.Nine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Nine.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Nine.FlatAppearance.BorderSize = 3;
-            this.Nine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Nine.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Nine.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Nine.Location = new System.Drawing.Point(158, 166);
-            this.Nine.Name = "Nine";
-            this.Nine.Size = new System.Drawing.Size(60, 60);
-            this.Nine.TabIndex = 20;
-            this.Nine.Text = "9";
-            this.Nine.UseVisualStyleBackColor = false;
-            this.Nine.Value = 9D;
-            this.Nine.Click += new System.EventHandler(this.Number_button_Click);
             // 
             // Multiplication
             // 
@@ -305,64 +244,13 @@ namespace Calculator
             this.Multiplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Multiplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Multiplication.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Multiplication.Location = new System.Drawing.Point(224, 166);
+            this.Multiplication.Location = new System.Drawing.Point(224, 190);
             this.Multiplication.Name = "Multiplication";
             this.Multiplication.Size = new System.Drawing.Size(60, 60);
             this.Multiplication.TabIndex = 13;
             this.Multiplication.Text = "×";
             this.Multiplication.UseVisualStyleBackColor = false;
-            this.Multiplication.Click += new System.EventHandler(this.Multiplication_Click);
-            // 
-            // Four
-            // 
-            this.Four.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Four.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Four.FlatAppearance.BorderSize = 3;
-            this.Four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Four.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Four.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Four.Location = new System.Drawing.Point(26, 232);
-            this.Four.Name = "Four";
-            this.Four.Size = new System.Drawing.Size(60, 60);
-            this.Four.TabIndex = 25;
-            this.Four.Text = "4";
-            this.Four.UseVisualStyleBackColor = false;
-            this.Four.Value = 4D;
-            this.Four.Click += new System.EventHandler(this.Number_button_Click);
-            // 
-            // Five
-            // 
-            this.Five.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Five.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Five.FlatAppearance.BorderSize = 3;
-            this.Five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Five.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Five.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Five.Location = new System.Drawing.Point(92, 232);
-            this.Five.Name = "Five";
-            this.Five.Size = new System.Drawing.Size(60, 60);
-            this.Five.TabIndex = 24;
-            this.Five.Text = "5";
-            this.Five.UseVisualStyleBackColor = false;
-            this.Five.Value = 5D;
-            this.Five.Click += new System.EventHandler(this.Number_button_Click);
-            // 
-            // Six
-            // 
-            this.Six.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Six.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Six.FlatAppearance.BorderSize = 3;
-            this.Six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Six.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Six.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Six.Location = new System.Drawing.Point(158, 232);
-            this.Six.Name = "Six";
-            this.Six.Size = new System.Drawing.Size(60, 60);
-            this.Six.TabIndex = 23;
-            this.Six.Text = "6";
-            this.Six.UseVisualStyleBackColor = false;
-            this.Six.Value = 6D;
-            this.Six.Click += new System.EventHandler(this.Number_button_Click);
+            this.Multiplication.Click += new System.EventHandler(this.Solve_Click);
             // 
             // Addition
             // 
@@ -372,64 +260,13 @@ namespace Calculator
             this.Addition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Addition.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Addition.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Addition.Location = new System.Drawing.Point(224, 232);
+            this.Addition.Location = new System.Drawing.Point(224, 256);
             this.Addition.Name = "Addition";
             this.Addition.Size = new System.Drawing.Size(60, 60);
             this.Addition.TabIndex = 14;
             this.Addition.Text = "+";
             this.Addition.UseVisualStyleBackColor = false;
-            this.Addition.Click += new System.EventHandler(this.Addition_Click);
-            // 
-            // One
-            // 
-            this.One.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.One.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.One.FlatAppearance.BorderSize = 3;
-            this.One.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.One.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.One.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.One.Location = new System.Drawing.Point(26, 298);
-            this.One.Name = "One";
-            this.One.Size = new System.Drawing.Size(60, 60);
-            this.One.TabIndex = 28;
-            this.One.Text = "1";
-            this.One.UseVisualStyleBackColor = false;
-            this.One.Value = 1D;
-            this.One.Click += new System.EventHandler(this.Number_button_Click);
-            // 
-            // Two
-            // 
-            this.Two.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Two.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Two.FlatAppearance.BorderSize = 3;
-            this.Two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Two.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Two.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Two.Location = new System.Drawing.Point(92, 298);
-            this.Two.Name = "Two";
-            this.Two.Size = new System.Drawing.Size(60, 60);
-            this.Two.TabIndex = 27;
-            this.Two.Text = "2";
-            this.Two.UseVisualStyleBackColor = false;
-            this.Two.Value = 2D;
-            this.Two.Click += new System.EventHandler(this.Number_button_Click);
-            // 
-            // Three
-            // 
-            this.Three.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Three.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Three.FlatAppearance.BorderSize = 3;
-            this.Three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Three.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Three.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Three.Location = new System.Drawing.Point(158, 298);
-            this.Three.Name = "Three";
-            this.Three.Size = new System.Drawing.Size(60, 60);
-            this.Three.TabIndex = 26;
-            this.Three.Text = "3";
-            this.Three.UseVisualStyleBackColor = false;
-            this.Three.Value = 3D;
-            this.Three.Click += new System.EventHandler(this.Number_button_Click);
+            this.Addition.Click += new System.EventHandler(this.Solve_Click);
             // 
             // Subtraction
             // 
@@ -439,13 +276,13 @@ namespace Calculator
             this.Subtraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Subtraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Subtraction.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Subtraction.Location = new System.Drawing.Point(224, 298);
+            this.Subtraction.Location = new System.Drawing.Point(224, 322);
             this.Subtraction.Name = "Subtraction";
             this.Subtraction.Size = new System.Drawing.Size(60, 60);
             this.Subtraction.TabIndex = 15;
             this.Subtraction.Text = "-";
             this.Subtraction.UseVisualStyleBackColor = false;
-            this.Subtraction.Click += new System.EventHandler(this.Subtraction_Click);
+            this.Subtraction.Click += new System.EventHandler(this.Solve_Click);
             // 
             // SignChange
             // 
@@ -455,13 +292,48 @@ namespace Calculator
             this.SignChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SignChange.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SignChange.Location = new System.Drawing.Point(26, 364);
+            this.SignChange.Location = new System.Drawing.Point(26, 388);
             this.SignChange.Name = "SignChange";
             this.SignChange.Size = new System.Drawing.Size(60, 60);
             this.SignChange.TabIndex = 16;
             this.SignChange.Text = "±";
             this.SignChange.UseVisualStyleBackColor = false;
             this.SignChange.Click += new System.EventHandler(this.SignChange_Click);
+            // 
+            // TmpDisplay
+            // 
+            this.TmpDisplay.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.TmpDisplay.Check_E_Count = 0;
+            this.TmpDisplay.FirstAction = true;
+            this.TmpDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TmpDisplay.LastAction = 0;
+            this.TmpDisplay.Location = new System.Drawing.Point(15, 14);
+            this.TmpDisplay.Name = "TmpDisplay";
+            this.TmpDisplay.ReadOnly = true;
+            this.TmpDisplay.Size = new System.Drawing.Size(279, 29);
+            this.TmpDisplay.TabIndex = 29;
+            this.TmpDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TmpDisplay.Value_Result = 0D;
+            this.TmpDisplay.Value_Tmp[0] = 0D;
+            // 
+            // Display
+            // 
+            this.Display.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Display.Check_E_Count = 0;
+            this.Display.FirstAction = true;
+            this.Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Display.LastAction = 0;
+            this.Display.Location = new System.Drawing.Point(15, 48);
+            this.Display.MaximumSize = new System.Drawing.Size(600, 80);
+            this.Display.MinimumSize = new System.Drawing.Size(279, 40);
+            this.Display.Name = "Display";
+            this.Display.ReadOnly = true;
+            this.Display.Size = new System.Drawing.Size(279, 29);
+            this.Display.TabIndex = 2;
+            this.Display.Text = "0    ";
+            this.Display.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Display.Value_Result = 0D;
+            this.Display.Value_Tmp[0] = 0D;
             // 
             // Zero
             // 
@@ -471,7 +343,7 @@ namespace Calculator
             this.Zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Zero.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Zero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Zero.Location = new System.Drawing.Point(92, 364);
+            this.Zero.Location = new System.Drawing.Point(92, 388);
             this.Zero.Name = "Zero";
             this.Zero.Size = new System.Drawing.Size(60, 60);
             this.Zero.TabIndex = 19;
@@ -480,12 +352,166 @@ namespace Calculator
             this.Zero.Value = 0D;
             this.Zero.Click += new System.EventHandler(this.Number_button_Click);
             // 
+            // Nine
+            // 
+            this.Nine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Nine.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Nine.FlatAppearance.BorderSize = 3;
+            this.Nine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Nine.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Nine.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Nine.Location = new System.Drawing.Point(158, 190);
+            this.Nine.Name = "Nine";
+            this.Nine.Size = new System.Drawing.Size(60, 60);
+            this.Nine.TabIndex = 20;
+            this.Nine.Text = "9";
+            this.Nine.UseVisualStyleBackColor = false;
+            this.Nine.Value = 9D;
+            this.Nine.Click += new System.EventHandler(this.Number_button_Click);
+            // 
+            // Eight
+            // 
+            this.Eight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Eight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Eight.FlatAppearance.BorderSize = 3;
+            this.Eight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eight.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Eight.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Eight.Location = new System.Drawing.Point(92, 190);
+            this.Eight.Name = "Eight";
+            this.Eight.Size = new System.Drawing.Size(60, 60);
+            this.Eight.TabIndex = 21;
+            this.Eight.Text = "8";
+            this.Eight.UseVisualStyleBackColor = false;
+            this.Eight.Value = 8D;
+            this.Eight.Click += new System.EventHandler(this.Number_button_Click);
+            // 
+            // Seven
+            // 
+            this.Seven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Seven.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Seven.FlatAppearance.BorderSize = 3;
+            this.Seven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Seven.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Seven.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Seven.Location = new System.Drawing.Point(26, 190);
+            this.Seven.Name = "Seven";
+            this.Seven.Size = new System.Drawing.Size(60, 60);
+            this.Seven.TabIndex = 22;
+            this.Seven.Text = "7";
+            this.Seven.UseVisualStyleBackColor = false;
+            this.Seven.Value = 7D;
+            this.Seven.Click += new System.EventHandler(this.Number_button_Click);
+            // 
+            // Six
+            // 
+            this.Six.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Six.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Six.FlatAppearance.BorderSize = 3;
+            this.Six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Six.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Six.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Six.Location = new System.Drawing.Point(158, 256);
+            this.Six.Name = "Six";
+            this.Six.Size = new System.Drawing.Size(60, 60);
+            this.Six.TabIndex = 23;
+            this.Six.Text = "6";
+            this.Six.UseVisualStyleBackColor = false;
+            this.Six.Value = 6D;
+            this.Six.Click += new System.EventHandler(this.Number_button_Click);
+            // 
+            // Five
+            // 
+            this.Five.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Five.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Five.FlatAppearance.BorderSize = 3;
+            this.Five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Five.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Five.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Five.Location = new System.Drawing.Point(92, 256);
+            this.Five.Name = "Five";
+            this.Five.Size = new System.Drawing.Size(60, 60);
+            this.Five.TabIndex = 24;
+            this.Five.Text = "5";
+            this.Five.UseVisualStyleBackColor = false;
+            this.Five.Value = 5D;
+            this.Five.Click += new System.EventHandler(this.Number_button_Click);
+            // 
+            // Four
+            // 
+            this.Four.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Four.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Four.FlatAppearance.BorderSize = 3;
+            this.Four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Four.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Four.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Four.Location = new System.Drawing.Point(26, 256);
+            this.Four.Name = "Four";
+            this.Four.Size = new System.Drawing.Size(60, 60);
+            this.Four.TabIndex = 25;
+            this.Four.Text = "4";
+            this.Four.UseVisualStyleBackColor = false;
+            this.Four.Value = 4D;
+            this.Four.Click += new System.EventHandler(this.Number_button_Click);
+            // 
+            // Three
+            // 
+            this.Three.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Three.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Three.FlatAppearance.BorderSize = 3;
+            this.Three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Three.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Three.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Three.Location = new System.Drawing.Point(158, 322);
+            this.Three.Name = "Three";
+            this.Three.Size = new System.Drawing.Size(60, 60);
+            this.Three.TabIndex = 26;
+            this.Three.Text = "3";
+            this.Three.UseVisualStyleBackColor = false;
+            this.Three.Value = 3D;
+            this.Three.Click += new System.EventHandler(this.Number_button_Click);
+            // 
+            // Two
+            // 
+            this.Two.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Two.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Two.FlatAppearance.BorderSize = 3;
+            this.Two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Two.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Two.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Two.Location = new System.Drawing.Point(92, 322);
+            this.Two.Name = "Two";
+            this.Two.Size = new System.Drawing.Size(60, 60);
+            this.Two.TabIndex = 27;
+            this.Two.Text = "2";
+            this.Two.UseVisualStyleBackColor = false;
+            this.Two.Value = 2D;
+            this.Two.Click += new System.EventHandler(this.Number_button_Click);
+            // 
+            // One
+            // 
+            this.One.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.One.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.One.FlatAppearance.BorderSize = 3;
+            this.One.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.One.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.One.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.One.Location = new System.Drawing.Point(26, 322);
+            this.One.Name = "One";
+            this.One.Size = new System.Drawing.Size(60, 60);
+            this.One.TabIndex = 28;
+            this.One.Text = "1";
+            this.One.UseVisualStyleBackColor = false;
+            this.One.Value = 1D;
+            this.One.Click += new System.EventHandler(this.Number_button_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
-            this.ClientSize = new System.Drawing.Size(308, 439);
+            this.ClientSize = new System.Drawing.Size(308, 465);
+            this.Controls.Add(this.TmpDisplay);
             this.Controls.Add(this.Display);
             this.Controls.Add(this.ChargingCell_0);
             this.Controls.Add(this.ChargingCell_1);
@@ -558,5 +584,6 @@ namespace Calculator
         private System.Windows.Forms.Button DecimalPoint;
         private System.Windows.Forms.Button Solve;
         private MyTextBox Display;
+        private MyTextBox TmpDisplay;
     }
 }

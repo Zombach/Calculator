@@ -6,15 +6,27 @@ namespace CalculatorLibrary
     {
         public TextBox textBox;
         public bool FirstAction { get; set; }
+        public bool Check_Decimal_Point { get; set; }
+        public bool Check_Solve_Repeat { get; set; }
+        public int Check_E_Count { get; set; }
+        public int LastAction { get; set; }
         public double Value_Result { get; set; }
-        public double Value_Tmp { get; set; }
+        public double[] Value_Tmp { get; set; }
+        public double Value_Last { get; set; }
+
 
         public MyTextBox()
         {
             textBox = new TextBox();
-            Value_Tmp = 0;
-            Value_Result = Value_Tmp;
             FirstAction = true;
+            Check_Decimal_Point = false;
+            Check_Solve_Repeat = false;
+            Check_E_Count = 0;
+            LastAction = 0; // 0 - небыло действий, 1 - сложение, 2 - вычитание
+            // 3 - умножение, 4 - деление
+            Value_Tmp = new double[3] { 0D, 0D, 1D };
+            Value_Result = 0D;
+            Value_Last = 0D;
         }
     }
 }
