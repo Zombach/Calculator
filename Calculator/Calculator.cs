@@ -73,7 +73,7 @@ namespace Calculator
             }
             else
             {
-                Display.Value_Tmp[1] = Display.Value_Tmp[0] * 10 + myButton.Value;
+                Display.Value_Tmp[1] = Display.Value_Tmp[1] * 10 + myButton.Value;
                 Display.Value_Tmp[2] += 1;
             }
             Display.Value_Tmp[0] = Display.Value_Tmp[0] + Display.Value_Tmp[1] / (Display.Value_Tmp[2] * 10);
@@ -140,9 +140,8 @@ namespace Calculator
             }
             Display.Check_Decimal_Point = true;
         }
-        private bool CheckSolveRepeat(object sender)
+        private bool CheckSolveRepeat(Button btn)
         {
-            Button btn = (Button)sender;
             if (btn.Name == "Addition" || btn.Name == "Subtraction" || 
                 btn.Name == "Multiplication" || btn.Name == "Division")
             {
@@ -150,90 +149,81 @@ namespace Calculator
             }
             return Display.Check_Solve_Repeat;
         }
-        private void Addition_Click(object sender, EventArgs e)
+        private void Addition_Click(Button btn)
         {
-            CheckSolveRepeat(sender);
+            CheckSolveRepeat(btn);
             Display.Value_Result += Display.Value_Tmp[0];
             TmpDisplay.Text = Convert.ToString(Display.Value_Result) + "    ";
             Display.Text = "0    ";
-            Display.LastAction = 1;
             Display.Check_E_Count = 0;
-            Display.Value_Last = Display.Value_Tmp[0];
             Display.Value_Tmp[0] = 0;
         }
 
-        private void Subtraction_Click(object sender, EventArgs e)
+        private void Subtraction_Click(Button btn)
         {
-            CheckSolveRepeat(sender);
+            CheckSolveRepeat(btn);
             Display.Value_Result -= Display.Value_Tmp[0];
             TmpDisplay.Text = Convert.ToString(Display.Value_Result) + "    ";         
             Display.Text = "0    ";
-            Display.LastAction = 2;
             Display.Check_E_Count = 0;
-            Display.Value_Last = Display.Value_Tmp[0];
             Display.Value_Tmp[0] = 0;
         }
 
-        private void Multiplication_Click(object sender, EventArgs e)
+        private void Multiplication_Click(Button btn)
         {
-            CheckSolveRepeat(sender);
+            CheckSolveRepeat(btn);
             Display.Value_Result *= Display.Value_Tmp[0];
             TmpDisplay.Text = Convert.ToString(Display.Value_Result) + "    ";
             Display.Text = "0    ";
-            Display.LastAction = 3;
             Display.Check_E_Count = 0;
-            Display.Value_Last = Display.Value_Tmp[0];
             Display.Value_Tmp[0] = 0;
         }
-        private void Division_Click(object sender, EventArgs e)
+        private void Division_Click(Button btn)
         {
             if (Display.Value_Tmp[0] == 0)
             {
                 throw new Exception("Нельзя так делать");
             }
-            CheckSolveRepeat(sender);
+            CheckSolveRepeat(btn);
             Display.Value_Result /= Display.Value_Tmp[0];
             TmpDisplay.Text = Convert.ToString(Display.Value_Result) + "    ";
             Display.Text = "0    ";
-            Display.LastAction = 4;
             Display.Check_E_Count = 0;
-            Display.Value_Last = Display.Value_Tmp[0];
             Display.Value_Tmp[0] = 0;
         }
         private void Solve_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Display.Value_Tmp[0] = Display.Value_Last;
-            switch (Display.LastAction)
+            Display.Value_Last = Display.Value_Tmp[0];
+            switch (btn.Name)
             {
-                case 0:
+                case "Addition":
+                    Addition_Click(btn);
                     break;
-                case 1:
-                    Addition_Click(sender, e);
+                case "Subtraction":
+                    Subtraction_Click(btn);
                     break;
-                case 2:
-                    Subtraction_Click(sender, e);
+                case "Multiplication":
+                    Multiplication_Click(btn);
                     break;
-                case 3:
-                    Multiplication_Click(sender, e);
-                    break;
-                case 4:
-                    Division_Click(sender, e);
+                case "Division":
+                    Division_Click(btn);
                     break;
                 default:
                     break;
             }
             if (!Display.Check_Solve_Repeat && btn.Name == "Solve")
             {
-                Display.Check_Decimal_Point = true;
+                Display.Check_Solve_Repeat = true;
             }
-            else if (Display.Check_Decimal_Point)
+            else if (Display.Check_Solve_Repeat && btn.Name == "Solve")
             {
                 TmpDisplay.Text = "Повторение действия    ";
             }
             Display.FirstAction = true;
             Display.Check_E_Count = 0;
             Display.Value_Tmp[2] = 1;
+            Display.Check_Decimal_Point = false;
         }
 
         private void Backspace_Click(object sender, EventArgs e)
@@ -299,8 +289,6 @@ namespace Calculator
             Display.Text = "0    ";
             Display.FirstAction = true;
             Display.Check_E_Count = 0;
-            Display.LastAction = 0; // 0 - небыло действий, 1 - сложение, 2 - вычитание
-                                    // 3 - умножение, 4 - деление
             Display.Value_Tmp[0] = 0;
             Display.Value_Tmp[1] = 0;
             Display.Value_Tmp[2] = 1;

@@ -306,7 +306,6 @@ namespace Calculator
             this.TmpDisplay.Check_E_Count = 0;
             this.TmpDisplay.FirstAction = true;
             this.TmpDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TmpDisplay.LastAction = 0;
             this.TmpDisplay.Location = new System.Drawing.Point(15, 14);
             this.TmpDisplay.Name = "TmpDisplay";
             this.TmpDisplay.ReadOnly = true;
@@ -322,7 +321,6 @@ namespace Calculator
             this.Display.Check_E_Count = 0;
             this.Display.FirstAction = true;
             this.Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Display.LastAction = 0;
             this.Display.Location = new System.Drawing.Point(15, 48);
             this.Display.MaximumSize = new System.Drawing.Size(600, 80);
             this.Display.MinimumSize = new System.Drawing.Size(279, 40);
